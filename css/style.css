@@ -1,0 +1,334 @@
+/* So resizing browser doesn't resize things correctly... */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins,Open Sans,sans-serif;
+}
+
+
+html,body
+{
+    display: block;
+    height: 100%;
+	width: 100%;
+    place-items: center; 
+} 
+
+
+/* Add hoverable dropdown for filter... Doesn't show! */
+.navbar { /* Should change the icon when you hover over. For the Aesthetics tm */
+	overflow: hidden;
+	border: 5px solid grey;
+   	position: fixed;
+ 	top: 0px;
+	width: 100%;
+	background-color: white;	
+}
+
+.navbar .navbarImages {
+	margin: 0 50px;
+	float: left;
+}
+/*
+.main {
+	margin-top: 200px; /* Avoids content overlay. adjust accordingly to navbar height... */
+
+/*body {
+    /*margin-top: 200px; /* Avoids content overlay. adjust accordingly to navbar height... */
+   /*padding-top: 15%;
+       }
+       */
+
+/* header.html nav styling */
+#nav-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.logo {
+    width: 75px;
+}
+
+.search-bar-form {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex-basis: 200px;
+}
+
+.search-bar-box {
+    height: 30px;
+    width: 100%;
+    padding: 0px;
+    border: none;
+    background-color: #ebebeb;
+    padding-left: 10px;
+}
+
+.search-bar-box:focus {
+    outline: solid;
+    outline-width: thin;
+    outline-color: #c7dbe2;
+}
+
+.search-bar-button {
+    font-family: FontAwesome;
+    flex-shrink: 0;
+    border: none;
+    background-color: #C0382A;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.search-bar-button:hover {
+    cursor: pointer;
+    background-color: #972b1f;
+}
+
+.a-nav {
+    text-decoration: none;
+    color: #181818;
+    margin: 5px;
+}
+
+.a-nav:hover {
+    color: #287222;
+}
+
+/* .bx {
+    margin: 5px;
+} */
+/* end of header.html nav styling */
+
+/*index page*/
+
+.filter-form {
+    position: static;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: auto;
+    height: fit-content;
+    float: left;
+    margin: 40px;
+    padding: 20px;
+    background-color: white;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    flex: 1 0 30%;
+    margin: 20px;
+    height: inherit;
+}
+
+input.cart-button[type=submit] { /* input.cart-button ? */
+    background-color: #C0382A;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 6px 4px;
+}
+
+input.cart-button[type=submit]:hover {
+    cursor: pointer;
+    background-color: #972b1f;
+}
+
+.checkoutMain {
+    /*top: 40%; /* not displaying... */
+    /* bottom: 0px; */
+    height: 100%;
+    width: 100%;
+}
+
+.checkoutSide {
+    /*top: 40%; */
+    float: left;
+    width: 50%;
+}
+
+/*login and signup navbar*/
+.h1-w {
+    font-weight: 900;
+    color: green;
+}
+
+/*login and signup navbar*/
+.topbar {
+    height: 12%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid gray;
+    box-shadow: 0 8px 6px -6px orange;
+}
+
+.form-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.button {
+    background-color: #C0382A;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 6px 4px;
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #972b1f;
+}
+
+.button a {
+    text-decoration: none;
+}
+/* Input text box stylings for login.php, signup.php, and Store_Checkout.php */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputTextCO {
+    font-size: 18px;
+    width: 200px;
+
+    /*float: left; */
+    border: 1px solid black;
+}
+
+ .inputTextContainer {
+    margin: auto;
+}
+
+/* Input error mesesages */
+.error { 
+    float: left;
+    color: red;
+    font-size: 14px;
+}
+
+/*checkout page*/
+#checkout {
+  
+    width: 100%;
+    display: inline-block;
+}
+
+.checkoutMain {
+    margin-left: 30px;
+}
+
+/*cart page*/
+.cart {
+    display: flex;
+    flex-direction: row;
+    left: 0px;
+    width: 100%;
+    display: inline;
+}
+
+    .cart > .navbar {
+        z-index: 1;
+    }
+
+.cart-body {
+    position: relative;
+    top: 15%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    z-index: 0;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    left: 0;
+    width: fit-content;
+}
+
+.cart-card {
+    display: flex;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    margin: 20px;
+    padding: 2%;
+    flex: 1 1 30%;
+    flex-direction: row;
+    width: fit-content;
+    background-color: white;
+}
+
+.cart-card-image {
+    height: 250px;
+}
+
+.cart-item-shipping {
+    position: inherit;
+    float: right;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.cart-item-title {
+    place-items: center;
+    width: 300px;
+    text-align: center;
+}
+
+.cart-cost-card {
+    place-items: center;
+    width: 300px;
+    text-align: center;
+}
+
+.cart-summary {
+    position: static;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 600px;
+    height: fit-content;
+    float: left;
+    margin: 40px;
+    padding: 20px;
+    background-color: white;
+}
+
+select {
+    font-family: inherit;
+    padding: 10px 15px;
+}
+
+input.cart-submit[type=submit] {
+    background-color: #C0382A;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 6px 4px;
+}
+
+    input.cart-submit[type=submit]:hover {
+        cursor: pointer;
+        background-color: #972b1f;
+    }
