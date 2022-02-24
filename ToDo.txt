@@ -1,0 +1,4 @@
+- Confirmation email
+- Quantity change in homepage
+- User profile
+- Admin management
